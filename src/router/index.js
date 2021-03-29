@@ -2,8 +2,8 @@ import Vue from 'vue';
 import VueCookies from 'vue-cookies';
 import Router from 'vue-router';
 
-import Home from '@/views/Home.vue';
-import NotFound from '@/views/NotFound.vue';
+import Home from 'Views/Home.vue';
+import NotFound from 'Views/NotFound.vue';
 
 Vue.use(Router);
 

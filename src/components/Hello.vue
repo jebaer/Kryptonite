@@ -24,7 +24,7 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex';
-import validation from '@/mixins/validation';
+import validation from 'Mixins/validation';
 
 export default {
     name: 'Hello',

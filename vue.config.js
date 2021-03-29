@@ -25,8 +25,27 @@ module.exports = {
         hotOnly: true,
         */
     },
-    chainWebpack: (config) => {
-        //this path is specific to my project
+    chainWebpack: config => {
+        config.resolve.alias.set(
+            'Components',
+            path.resolve(__dirname, './src/components'),
+        );
+        config.resolve.alias.set(
+            'Mixins',
+            path.resolve(__dirname, './src/mixins'),
+        );
+        config.resolve.alias.set(
+            'Router',
+            path.resolve(__dirname, './src/router'),
+        );
+        config.resolve.alias.set(
+            'Store',
+            path.resolve(__dirname, './src/store'),
+        );
+        config.resolve.alias.set(
+            'Views',
+            path.resolve(__dirname, './src/views'),
+        );
         config.resolve.alias.set('@', path.resolve(__dirname, './src'));
     },
 };
