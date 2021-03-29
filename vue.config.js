@@ -25,12 +25,8 @@ module.exports = {
         hotOnly: true,
         */
     },
-    confirgureWebpack: {
-        extensions: ['.js', '.vue'],
-        resolve: {
-            alias: {
-                '@': path.resolve(__dirname, './src'),
-            },
-        },
+    chainWebpack: (config) => {
+        //this path is specific to my project
+        config.resolve.alias.set('@', path.resolve(__dirname, './src'));
     },
 };

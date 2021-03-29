@@ -3,11 +3,11 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "serve": "npm run css-build && vue-cli-service serve",
+        "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
         "lint": "vue-cli-service lint",
         "watch:css": "postcss src/assets/css/tailwind.css -o public/css/main.css",
-        "start": "npm run css-build && npm run serve",
+        "start": "npm run serve",
         "beforeCommit": "eslint -c .commit.eslintrc ./src",
         "test": "jest"
     },
