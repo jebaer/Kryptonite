@@ -9,7 +9,9 @@
         "watch:css": "postcss src/assets/css/tailwind.css -o public/css/main.css",
         "start": "npm run serve",
         "beforeCommit": "eslint -c .commit.eslintrc ./src",
-        "test": "jest"
+        "test:coverage": "jest",
+        "test:all": "jest --collectCoverage=false",
+        "test:watch": "jest -o --collectCoverage=false"
     },
     "dependencies": {
         "axios": "^0.19.2",
@@ -41,7 +43,7 @@
         "eslint-plugin-vue": "^6.2.2",
         "jest": "^26.6.3",
         "node-loader": "^0.6.0",
-        "postcss": "^8.2.1",
+        "postcss": "^8.2.8",
         "postcss-cli": "^8.3.1",
         "tailwindcss": "^2.0.2",
         "vue-jest": "^3.0.7",

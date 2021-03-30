@@ -1,10 +1,10 @@
 <template>
     <div class="flex flex-col justify-center w-full items-center">
-        <h1 class="text-2xl text-white-base font-bold">
-            VUEJS 2.6 STARTER KIT
+        <h1 class="text-3xl text-main-base font-bold">
+            KRYPTO
         </h1>
-        <h2 class="text-xl text-secondary-base">
-            A PRECONFIGURED PACKAGE TO START IN A RIGHT WAY
+        <h2 class="text-xl text-red-400">
+            LIVE STREAM THE CRYPTOCURRENCIES MARKET
         </h2>
         <Hello />
     </div>

@@ -1,5 +1,5 @@
 <template>
-    <div id="app" class="bg-black-base text-white-base">
+    <div id="app" class="bg-yellow-base text-main-base">
         <main
             class="flex flex-col fixed top-0 bottom-0 w-full items-center justify-center"
         >
@@ -49,5 +49,12 @@ main::-webkit-scrollbar {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+:focus {
+    outline: none;
+}
+::-moz-focus-inner {
+    border: 0;
 }
 </style>

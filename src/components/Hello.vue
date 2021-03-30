@@ -5,18 +5,22 @@
                 v-model="name"
                 type="text"
                 placeholder="What's your name?"
-                class="bg-transparent text-white-base border-0 focus:border-0 border-b-2 border-white-base min-w-full"
-                :class="{ 'border-secondary-base': isInvalid }"
+                class="bg-transparent text-main-base border-0 focus:border-0 border-b-2 min-w-full placeholder-red-500"
+                :class="{
+                    'border-main-base ': !name,
+                    'border-red-400': isInvalid,
+                    'border-green-400': !isInvalid,
+                }"
                 @keyup="validate"
             />
             <button
-                class="bg-secondary-base hover:bg-secondary-dark text-lg min-w-full mt-3"
+                class="bg-red-400 hover:bg-red-500 text-lg min-w-full mt-3"
                 @click="handleClick"
             >
                 &#128640; SEND
             </button>
         </div>
-        <p v-if="display" class="text-xl text-white-base font-bold">
+        <p v-if="display" class="text-xl text-main-base font-bold">
             &#128075; Hello {{ getName.toUpperCase() }} ! &#128075;
         </p>
     </section>
