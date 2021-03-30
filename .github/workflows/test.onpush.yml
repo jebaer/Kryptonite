@@ -23,8 +23,11 @@ jobs:
                   npm ci
                   npm run build --if-present
                   npm test
-            - name: Archive test coverage
+            - name: Create test coverage archive
+              run: tar -zvcf ./coverage.tar.gz ./coverage
+              shell: bash
+            - name: Retrieve test coverage archive
               uses: actions/upload-artifact@v2
               with:
                   name: code-coverage-report
-                  path: coverage/index.html
+                  path: coverage.tar.gz
