@@ -2,7 +2,7 @@ name: Unit testing application
 
 on:
     schedule:
-        cron: ['0 1 * * 1']
+        - cron: ['0 1 * * 1']
 
 jobs:
     test:
