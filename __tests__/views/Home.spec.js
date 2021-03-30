@@ -13,7 +13,7 @@ afterEach(() => {
 
 describe('Home.vue', () => {
     test('should render correct contents', () => {
-        expect(wrapper.html()).toContain('KRYPTO');
+        expect(wrapper.html()).toContain('KRYPTONITE');
         expect(wrapper.html()).toContain(
             'LIVE STREAM THE CRYPTOCURRENCIES MARKET',
         );
