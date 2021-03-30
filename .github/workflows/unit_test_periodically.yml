@@ -1,8 +1,8 @@
-name: Unit testing application
+name: Periodically unit testing
 
 on:
     schedule:
-        - cron: ['0 1 * * 1']
+        - cron: '0 1 * * 1'
 
 jobs:
     test:
