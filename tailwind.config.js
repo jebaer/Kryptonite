@@ -1,6 +1,6 @@
 module.exports = {
     future: {},
-    purge: [],
+    purge: ['./src/**/*.html', './src/**/*.vue'],
     theme: {
         extend: {
             colors: {
@@ -15,9 +15,9 @@ module.exports = {
                     dark: '#292929',
                 },
                 main: {
-                    light: '#2769B9',
-                    base: '#1D4E89',
-                    dark: '#194376',
+                    light: '#005b8c',
+                    base: '#003a59',
+                    dark: '#001926',
                 },
                 secondary: {
                     light: '#E43A72',
@@ -28,6 +28,9 @@ module.exports = {
                     light: '#F5F5F5',
                     base: '#EBEBEB',
                     dark: '#E0E0E0',
+                },
+                yellow: {
+                    base: '#ffd770',
                 },
             },
             fontFamily: {
