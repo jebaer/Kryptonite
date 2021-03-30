@@ -2,13 +2,15 @@ name: Unit testing application
 
 on:
     push:
-        branches: [master]
+        branches: ['develop']
+    pull_request:
+        branches: ['master', 'develop']
     create:
         tags: '*'
 
 jobs:
     test:
-        name: unit testing app on ${{matrix.node_version}}
+        name: unit testing application
         runs-on: ubuntu-latest
         strategy:
             matrix:
@@ -30,4 +32,5 @@ jobs:
               uses: actions/upload-artifact@v2
               with:
                   name: code-coverage-report
-                  path: coverage.tar.gz
+                  path: ./coverage.tar.gz
+                  retention-days: 5
