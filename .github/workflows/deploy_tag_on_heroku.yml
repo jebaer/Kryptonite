@@ -38,7 +38,7 @@ jobs:
         needs: test
         steps:
             - name: Push to Heroku
-              run: git push -f https://heroku:${{ secrets.HEROKU_API_TOKEN }}@git.heroku.com/${{ secrets.HEROKU_APP_NAME }}.git origin/master:master
+              run: git push -f https://heroku:${{ secrets.HEROKU_API_TOKEN }}@git.heroku.com/kryptonite.git origin/master:master
             - name: Update RELEASE_VERSION on Heroku production
               if: success()
               run: |
