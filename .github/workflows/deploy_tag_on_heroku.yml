@@ -37,8 +37,8 @@ jobs:
         runs-on: ubuntu-latest
         needs: test
         env:
-            HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
-            HEROKU_APP_NAME: ${{secrets.HEROKU_APP_NAME}}
+            HEROKU_API_TOKEN: 58911a23-0c1e-426c-8be7-2cf6ebbc81d3
+            HEROKU_APP_NAME: kryptonyte
         steps:
             - name: push on Heroku
               if: success()
