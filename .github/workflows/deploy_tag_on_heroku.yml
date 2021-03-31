@@ -1,6 +1,8 @@
 name: Application deployment
 
 on:
+    push:
+        branches: ['master']
     create:
         tags: ['v*']
 
@@ -36,14 +38,11 @@ jobs:
         needs: test
         steps:
             - name: Push to Heroku
-              run: git push -f https://heroku:${{ secrets.HEROKU_API_TOKEN }}@git.heroku.com/krypto-nite.git origin/master:master
+              run: git push -f https://heroku:${{ secrets.HEROKU_API_TOKEN }}@https://git.heroku.com/krypto-nite.git origin/master:master
             - name: Update RELEASE_VERSION on Heroku production
               if: success()
               run: |
                   curl -n -X PATCH https://api.heroku.com/apps/krypto-nite/config-vars \
-                  -d '{
-                  "RELEASE_VERSION”: "${{ github.ref }}",
-                  }’ \
                   -H "Authorization: Bearer ${{ secrets.HEROKU_API_TOKEN }}"
                   -H "Content-Type: application/json" \
                   -H "Accept: application/vnd.heroku+json; version=3"
