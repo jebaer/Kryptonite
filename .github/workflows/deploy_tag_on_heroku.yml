@@ -38,11 +38,11 @@ jobs:
         needs: test
         steps:
             - name: Push to Heroku
-              run: git push -f https://heroku:${{ secrets.HEROKU_API_TOKEN }}@https://git.heroku.com/krypto-nite.git origin/master:master
+              run: git push -f https://heroku:${{ secrets.HEROKU_API_TOKEN }}@git.heroku.com/${{ secrets.HEROKU_APP_NAME }}.git origin/master:master
             - name: Update RELEASE_VERSION on Heroku production
               if: success()
               run: |
-                  curl -n -X PATCH https://api.heroku.com/apps/krypto-nite/config-vars \
+                  curl -n -X PATCH https://api.heroku.com/apps/${{ secrets.HEROKU_APP_NAME }}/config-vars \
                   -H "Authorization: Bearer ${{ secrets.HEROKU_API_TOKEN }}"
                   -H "Content-Type: application/json" \
                   -H "Accept: application/vnd.heroku+json; version=3"
