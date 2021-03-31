@@ -37,10 +37,13 @@ jobs:
         runs-on: ubuntu-latest
         needs: test
         env:
-            HEROKU_API_TOKEN: 58911a23-0c1e-426c-8be7-2cf6ebbc81d3
-            HEROKU_APP_NAME: kryptonyte
+            HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
+            HEROKU_APP_NAME: ${{secrets.HEROKU_APP_NAME}}
         steps:
             - name: push on Heroku
               if: success()
               run: |
-                  git push https://heroku:58911a23-0c1e-426c-8be7-2cf6ebbc81d3@git.heroku.com/kryptonyte.git origin/master:master
+                  echo ${{ secrets.HEROKU_API_TOKEN }}
+                  echo ${{secrets.HEROKU_APP_NAME}}
+                  echo ${{ github.ref }}
+                  git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/master:master
