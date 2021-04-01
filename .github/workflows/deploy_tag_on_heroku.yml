@@ -38,6 +38,9 @@ jobs:
         needs: test
         steps:
             - uses: actions/checkout@v2
+            - name: login to heroku
+              run: |
+                heroku container:login
             - name: push on Heroku
               if: success()
               run: |
