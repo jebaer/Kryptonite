@@ -40,5 +40,4 @@ jobs:
             - uses: actions/checkout@v2
             - name: push on Heroku
               run: |
-                  heroku login
                   git push heroku master
