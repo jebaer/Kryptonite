@@ -41,4 +41,5 @@ jobs:
             - name: push on Heroku
               run: |
                   git remote add heroku-kryptonite https://heroku:2623fd0f-9c53-4516-b9ff-077e738a261e@git.heroku.com/kryptonyte.git
-                  git push heroku-kryptonite origin:master/master -f
+                  git filter-branch -- --all
+                  git push heroku-kryptonite ${{ github.ref }} -f
