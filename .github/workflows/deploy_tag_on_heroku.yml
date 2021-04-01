@@ -39,5 +39,4 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - name: push on Heroku
-              run: |
-                  git push heroku master
+              run: git push heroku master
