@@ -39,11 +39,8 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - name: login to heroku
-              run: |
-                heroku container:login
+              run: heroku login
             - name: push on Heroku
               if: success()
               run: |
-                  echo ${{secrets.HEROKU_API_TOKEN}}
-                  echo ${{ github.ref }}
                   git push https://heroku:${{ secrets.HEROKU_API_TOKEN }}@git.heroku.com/kryptonyte.git origin/master:master
