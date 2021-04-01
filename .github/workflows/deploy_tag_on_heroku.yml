@@ -40,5 +40,5 @@ jobs:
             - uses: actions/checkout@v2
             - name: push on Heroku
               run: |
-                heroku git:remote -a kryptonyte
-                git push heroku master
+                git remote add heroku-kryptonite https://heroku:${{ secrets.HEROKU_API_TOKEN }}@git.heroku.com/kryptonyte.git
+                git push heroku-kryptonite ${{ github.ref }}
