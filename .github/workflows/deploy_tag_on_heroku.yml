@@ -40,6 +40,4 @@ jobs:
             - uses: actions/checkout@v2
             - name: push on Heroku
               run: |
-                    echo `heroku auth:token`
-                    heroku auth:token
-                    git push https://heroku:${{ secrets.HEROKU_API_TOKEN }}@git.heroku.com/kryptonyte.git origin/master:master
+                  git push https://heroku:${{ secrets.HEROKU_API_TOKEN }}@git.heroku.com/kryptonyte.git origin/master:master
