@@ -42,4 +42,6 @@ jobs:
               run: |
                   git remote add heroku-kryptonite https://heroku:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/kryptonyte.git
                   git filter-branch -- --all
-                  git push heroku-kryptonite ${{ github.ref }} -f
+                  heroku-kryptonite buildpacks:add heroku/nodejs
+                  heroku-kryptonite buildpacks:add https://github.com/heroku/heroku-buildpack-static
+                  git push heroku-kryptonite master -f
