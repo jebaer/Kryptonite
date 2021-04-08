@@ -1,8 +1,8 @@
 {
-    "root": "dist",
+    "root": "dist/",
     "clean_urls": true,
     "routes": {
-        "/css": "main.css",
+        "/assets/*": "/assets/",
         "/**": "index.html"
     }
 }
