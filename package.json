@@ -10,7 +10,6 @@
         "build": "vue-cli-service build",
         "lint": "vue-cli-service lint",
         "watch:css": "postcss src/assets/css/tailwind.css -o public/css/main.css",
-        "build:css": "postcss build src/assets/css/tailwind.css -o public/css/main.css",
         "start": "npm run serve",
         "beforeCommit": "eslint -c .commit.eslintrc ./src",
         "test:coverage": "jest",

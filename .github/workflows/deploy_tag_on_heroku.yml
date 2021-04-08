@@ -1,8 +1,6 @@
 name: Application deployment
 
 on:
-    push:
-        branches: ['master']
     create:
         tags: ['v*']
 
