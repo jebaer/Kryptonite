@@ -7,7 +7,7 @@
     "private": true,
     "scripts": {
         "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build",
+        "build": "build:css && vue-cli-service build",
         "lint": "vue-cli-service lint",
         "watch:css": "postcss src/assets/css/tailwind.css -o public/css/main.css",
         "build:css": "postcss build src/assets/css/tailwind.css -o public/css/main.css",

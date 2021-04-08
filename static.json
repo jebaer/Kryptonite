@@ -3,6 +3,7 @@
     "clean_urls": true,
     "routes": {
         "/assets/*": "/assets/",
+        "/public/**": "*.css",
         "/**": "index.html"
     }
 }
