@@ -1,6 +1,6 @@
 module.exports = {
     future: {},
-    purge: ['./src/**/*.html', './src/**/*.vue'],
+    purge: ['./src/**/*.html', './src/**/*.vue', 'public/**/*.html'],
     theme: {
         extend: {
             colors: {
