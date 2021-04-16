@@ -5,7 +5,8 @@
                 v-model="name"
                 type="text"
                 placeholder="What's your name?"
-                class="bg-transparent text-main-base border-0 focus:border-0 border-b-2 min-w-full placeholder-red-500"
+                class="bg-transparent text-main-base border-0 focus:border-0 border-b-2 min-w-full
+                     placeholder-custom-blue"
                 :class="{
                     'border-main-base ': !name,
                     'border-red-400': isInvalid,
@@ -14,7 +15,8 @@
                 @keyup="validate"
             />
             <button
-                class="bg-red-400 hover:bg-red-500 text-lg min-w-full mt-3"
+                class="bg-custom-yellow hover:bg-custom-red border-solid border-2
+                 border-custom-blue text-lg font-semibold min-w-full mt-3 rounded-sm"
                 @click="handleClick"
             >
                 &#128640; SEND

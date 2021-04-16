@@ -1,9 +1,12 @@
 <template>
     <div class="flex flex-col justify-center w-full items-center">
-        <h1 class="text-3xl text-main-base font-bold">
+        <h1
+            class="text-3xl text-custom-white
+         font-bold font-title"
+        >
             KRYPTONITE
         </h1>
-        <h2 class="text-xl text-red-400">
+        <h2 class="text-xl text-custom-primary font-title">
             LIVE STREAM THE CRYPTOCURRENCIES MARKET
         </h2>
         <Hello />

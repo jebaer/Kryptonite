@@ -1,5 +1,5 @@
 <template>
-    <div id="app" class="bg-yellow-base text-main-base">
+    <div id="app" class="bg-custom-black text-custom-grey">
         <main
             class="flex flex-col fixed top-0 bottom-0 w-full items-center justify-center"
         >
